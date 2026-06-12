@@ -130,6 +130,25 @@ cp -R ./ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
 Use $ian-xiaohei-illustrations 为这篇中文文章设计并生成 5 张小黑怪诞正文配图。
 ```
 
+### 可选：个人形象版本
+
+仓库同时保留一个个人线稿 IP 版本：
+
+```bash
+cp -R ./jiao-glasses-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
+```
+
+使用方式：
+
+```text
+Use $jiao-glasses-illustrations 用我的形象为这篇中文文章设计并生成 4 张正文配图。
+```
+
+两个版本的切换规则：
+
+- 需要中性、公共、患者材料或不想出现个人形象时，用 `$ian-xiaohei-illustrations` 原版小黑。
+- 需要个人博客、个人 IP、私域内容或明确说“用我的形象”时，用 `$jiao-glasses-illustrations` 小镜版本。
+
 ---
 
 ## 怎么用
@@ -202,6 +221,18 @@ Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流�
 │   │   └── ...
 │   └── prompts.md
 └── ian-xiaohei-illustrations/
+    ├── SKILL.md
+    ├── agents/
+    │   └── openai.yaml
+    ├── assets/
+    │   └── examples/
+    └── references/
+        ├── style-dna.md
+        ├── xiaohei-ip.md
+        ├── composition-patterns.md
+        ├── prompt-template.md
+        └── qa-checklist.md
+└── jiao-glasses-illustrations/
     ├── SKILL.md
     ├── agents/
     │   └── openai.yaml
